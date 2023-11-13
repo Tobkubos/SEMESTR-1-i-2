@@ -1,0 +1,2 @@
+1: nazwa: papieroszki  |  cena: 25.4
+2: nazwa: kabanoszki  |  cena: 42.2

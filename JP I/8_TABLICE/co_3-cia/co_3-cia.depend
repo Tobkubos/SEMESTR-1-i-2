@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1668627503 source:c:\users\gregk\onedrive\pulpit\jezyki programowania\co_3-cia\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1668627744 source:d:\jezyki_programowania_lepiej\co_3-cia\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1678794333 source:c:\users\gregk\onedrive\pulpit\semestr_2\jp\obiektowe_2\main.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<cmath>
+

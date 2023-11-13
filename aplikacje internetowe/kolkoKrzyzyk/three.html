@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 3px solid black;
+    }
+
+    div img {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 80px;
+        height: 80px;
+    }
+
+    body {
+        animation: widok 2s;
+        overflow: hidden;
+        background-color: #615055;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h1,
+    h2 {
+        text-transform: capitalize;
+        color: white;
+
+    }
+
+    h1 {
+        font-size: 80px;
+        text-shadow: 0px 7px 5px rgb(0, 0, 0);
+        margin-left: 710px;
+        margin-top: 130px;
+    }
+
+    h2 {
+        position: absolute;
+        z-index: 2;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-shadow: 0px 7px 5px rgb(0, 0, 0);
+        margin-left: 800px;
+        margin-top: 450px;
+
+    }
+
+    #div1 {
+        left: 770px;
+        top: 270px;
+        width: 400px;
+        height: 400px;
+        background-color: #CDD5D1;
+    }
+
+    #div2 {
+        left: 770px;
+        top: 690px;
+        width: 400px;
+        height: 120px;
+        background-color: #B4A6AB;
+
+    }
+
+    #div3 {
+        z-index: -1;
+        left: 475px;
+        top: -100px;
+        width: 600px;
+        height: 1500px;
+        background-color: #2D2527;
+        border-top: none;
+        border-left: 200px solid #382E30;
+        border-right: 200px solid #382E30;
+        border-bottom: none;
+    }
+
+    @keyframes widok {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+<script>
+    function GenDiv() {
+        let num = 3, newDiv, divIdName;
+        for (let i = 0; i < num; i++)
+            for (let j = 0; j < num; j++) {
+                newDiv = document.createElement('div');
+                divIdName = 'a' + i + j;
+                newDiv.setAttribute('id', divIdName);
+                newDiv.style.top = 300 + 121 * i + 'px';
+                newDiv.style.left = 800 + 121 * j + 'px';
+                newDiv.addEventListener('click', function () { Graj(this); });
+                document.body.appendChild(newDiv);
+            }
+    }
+    let p1 = "<img src='kolko.png'>";
+    let p2 = "<img src='krzyzyk.png'>";
+    let k = 0;
+    let tab33 = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+    let tabId = [
+        ['a00', 'a01', 'a02'],
+        ['a10', 'a11', 'a12'],
+        ['a20', 'a21', 'a22']];
+
+
+    function Wygrana(a) {
+        let win = false;
+        let sum1 = 0, sum2 = 0, sum3 = 0; sum4 = 0;
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                sum1 += tab33[i][j];
+                sum2 += tab33[j][i];
+                if (i == j) sum3 += tab33[i][j];
+                if (i + j == 2) sum4 += tab33[i][j];
+            }
+            if (sum1 == 3 * a || sum2 == 3 * a || sum3 == 3 * a || sum4 == 3 * a) { win = true; }
+            sum1 = 0; sum2 = 0;
+        }
+        sum3 = 0;
+        sum4 = 0;
+        //  if (document.getElementById('a00') == p1 && document.getElementById('a11') == p1 && document.getElementById('a22') == p1) { win = true; }
+
+        return win;
+
+    }
+
+    function Graj(x) {
+        if (a33.innerHTML == "") {
+            let row, col;
+            for (let i = 0; i < 3; i++)
+                for (let j = 0; j < 3; j++) {
+                    if (x == document.getElementById(tabId[i][j])) { row = i; col = j; }
+                    a33.innerHTML = "";
+                }
+            if (x.innerHTML == "") {
+                if (k == 0) {
+                    x.innerHTML = p1;
+                    tab33[row][col] = 1;
+                    if (Wygrana(1)) {
+                        a33.innerHTML = p1;
+                    }
+                    k = 1;
+                }
+                else {
+                    x.innerHTML = p2;
+                    tab33[row][col] = -1;
+                    if (Wygrana(-1)) {
+                        a33.innerHTML = p2;
+                    }
+                    k = 0;
+                }
+            }
+
+        }
+
+    }
+</script>
+
+<body onload="GenDiv()">
+    <h1>tic tac toe</h1>
+    <h2>Wygrana:</h2>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="a33" style="left:1040px;top:700px"></div>
+</body>
+
+</html>

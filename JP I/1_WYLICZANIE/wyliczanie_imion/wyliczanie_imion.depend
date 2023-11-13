@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1666812990 source:c:\users\gregk\onedrive\pulpit\jezyki programowania\wyliczanie_imion\main.cpp
+	<iostream>
+	<windows.h>
+	<conio.h>
+

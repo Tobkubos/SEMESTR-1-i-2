@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1668855317 source:c:\users\tobiasz\desktop\tablica_zamiana2\main.cpp
+	<iostream>
+	<fstream>
+

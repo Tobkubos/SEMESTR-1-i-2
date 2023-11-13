@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Josefin+Sans:wght@200;400;700&display=swap');
+
+
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cinzel', serif;
+            overflow-x: hidden;
+            background-image: linear-gradient(45deg, black, #07142c, #4b0069, #000000);
+            overflow: hidden;
+        }
+
+        .menu {
+            min-height: 100vh;
+        }
+
+        .menu_txt {
+            margin-top: 20vh;
+            font-size: 7vw;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            text-shadow: white 0px 0px 15px;
+            word-spacing: 1vw;
+            transition: 1s ease-in-out;
+        }
+
+        .menu_txt_bottom {
+            font-size: 3vw;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            text-shadow: white 0px 0px 15px;
+            word-spacing: 1vw;
+            transition: 1s ease-in-out;
+            opacity: 0;
+            margin-bottom: 100px;
+        }
+
+        .menu_txt:hover {
+            word-spacing: 3vw;
+            text-shadow: white 0px 0px 60px;
+        }
+
+        .menu_txt:hover+.menu_txt_bottom {
+            opacity: 1;
+        }
+
+
+        .explorer {
+            display: grid;
+            grid-row: 1 / span 1;
+            grid-column: 1 / span 1;
+            height: 200px;
+            width: 200px;
+            padding: 2vh;
+            font-size: 35px;
+            line-height: 200px;
+            border-top: 5px solid white;
+            border-right: 5px solid white;
+            margin: auto;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 1s ease-in-out;
+            text-shadow: white 0px 0px 60px;
+        }
+
+        .explorer:hover {
+            border-radius: 50%;
+            text-shadow: white 0px 0px 20px, white 0px 0px 20px, white 0px 0px 20px, white 0px 0px 20px;
+        }
+
+        .lev {
+
+            display: inline-block;
+        }
+
+        .lev1 {
+            animation: levitation 2s infinite ease-in-out 0s;
+        }
+
+        .lev2 {
+            animation: levitation 2s infinite ease-in-out 0.2s;
+        }
+
+        .lev3 {
+            animation: levitation 2s infinite ease-in-out 0.4s;
+        }
+
+        .lev4 {
+            animation: levitation 2s infinite ease-in-out 0.6s;
+        }
+
+        .star {
+            top: 0;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 50%;
+            box-shadow: white 0px 0px 20px;
+        }
+
+        .star1 {
+            top: 20vh;
+            left: 10vw;
+            animation: shine 5s infinite ease-in-out 0s;
+
+        }
+
+        .star4 {
+            top: 7vh;
+            left: 25vw;
+            animation: shine 5s infinite ease-in-out 4s;
+
+        }
+
+        .star6 {
+            top: 9vh;
+            left: 40vw;
+            animation: shine 5s infinite ease-in-out 3s;
+
+        }
+
+        .star5 {
+            top: 48vh;
+            left: 70vw;
+            animation: shine 5s infinite ease-in-out 1.5s;
+
+        }
+
+        .star2 {
+            top: 60vh;
+            left: 60vw;
+            animation: shine 5s infinite ease-in-out 2s;
+
+        }
+
+        .star3 {
+            top: 50vh;
+            left: 80vw;
+            animation: shine 5s infinite ease-in-out 1s;
+
+        }
+
+
+        @keyframes shine {
+            0% {
+                box-shadow: white 0px 0px 20px;
+
+            }
+
+            25% {
+                box-shadow: white 0px 0px 50px, 0px 0px 50px, 0px 0px 50px, 0px 0px 50px, 0px 0px 50px, 0px 0px 50px;
+                opacity: 1;
+            }
+
+            75% {
+                box-shadow: white 0px 0px 50px, white 0px 0px 50px, white 0px 0px 50px, white 0px 0px 50px, white 0px 0px 50px, white 0px 0px 50px;
+                opacity: 1;
+            }
+
+            100% {
+                box-shadow: white 0px 0px 20px;
+            }
+        }
+
+
+        @keyframes levitation {
+            0% {
+                transform: translate(0, 0px);
+            }
+
+            50% {
+                transform: translate(0, 10px);
+            }
+
+            100% {
+                transform: translate(0, 0px);
+            }
+        }
+
+        @media(max-width: 1400px) {
+            .star5 {
+                top: 38vh;
+                left: 75vw;
+
+            }
+
+            .star2 {
+                top: 60vh;
+                left: 70vw;
+
+            }
+
+            .star3 {
+                top: 40vh;
+                left: 90vw;
+
+            }
+        }
+
+        @media(max-width: 800px) {
+            .star5 {
+                top: 38vh;
+                left: 75vw;
+
+            }
+
+            .star2 {
+                top: 70vh;
+                left: 80vw;
+
+            }
+
+            .star3 {
+                top: 50vh;
+                left: 90vw;
+
+            }
+
+            .star1 {
+                top: 16vh;
+                left: 10vw;
+
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="menu">
+
+        <div class="star star1"></div>
+        <div class="star star2"></div>
+        <div class="star star3"></div>
+        <div class="star star4"></div>
+        <div class="star star5"></div>
+        <div class="star star6"></div>
+        <p class="menu_txt">
+            <span class="lev lev1">per </span>
+            <span class="lev lev2">aspera </span>
+            <span class="lev lev3">ad </span>
+            <span class="lev lev4">astra </span>
+        </p>
+        <p class="menu_txt_bottom">through difficulties to the stars</p>
+
+        <a class="explorer" href="main.html">explore</a>
+    </div>
+
+</body>
+
+</html>

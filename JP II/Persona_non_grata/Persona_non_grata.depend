@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1680004076 source:c:\users\gregk\onedrive\pulpit\semestr_2\jp\persona_non_grata\main.cpp
+	<iostream>
+	<cmath>
+	<cstring>
+

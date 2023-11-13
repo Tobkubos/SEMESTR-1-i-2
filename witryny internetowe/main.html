@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/4ceb812512.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+
+        .navbut {
+            max-width: 80px;
+        }
+
+        .navbut:hover {
+            transition: 0.3s;
+            background-color: rgb(53, 13, 71) !important;
+            color: white !important;
+        }
+
+        .navbut,
+        #dropdown {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 15px;
+            padding-left: 18px;
+            padding-right: 18px;
+            text-shadow: white 0px 0px 10px;
+            float: left;
+            width: 14%;
+        }
+
+        .navbut2 {
+            color: white;
+            text-shadow: white 0px 0px 10px;
+        }
+
+
+        /* SEKCJA1 */
+        #planets {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            line-height: 150px;
+            font-size: 10vw;
+            text-align: center;
+            padding-top: 50px;
+            padding: 75px;
+            margin: 0;
+        }
+
+        .max-width {
+            max-width: 300px;
+        }
+
+        .cards {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            box-shadow: rgb(0, 0, 0) 0px 0px 25px, rgb(0, 0, 0) 0px 0px 25px, rgb(0, 0, 0) 0px 0px 25px, rgb(0, 0, 0) 0px 0px 25px;
+        }
+
+        .card:hover {
+            box-shadow: white 0px 0px 25px, white 0px 0px 25px, white 0px 0px 25px, white 0px 0px 25px;
+            transition: 0.4s;
+        }
+
+        .planetcard {
+            height: 500px;
+            height: 500px;
+            background-color: black;
+            color: white;
+        }
+
+        .planetimg {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+
+        /* SEKCJA2 */
+        .section2 {
+            background-image: url("img/rocket.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section2info {
+            max-width: 1000px;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            font-size: 15px;
+            color: white;
+            text-align: justify;
+            margin-top: 250px;
+            margin-bottom: 250px;
+            padding: 10px 35px 10px 35px;
+        }
+
+        .section2topic {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            color: white;
+            letter-spacing: 1vw;
+        }
+
+
+        /*SEKCJA 3 - FORMULARZ */
+        .section3 {
+            background-image: url("img/formbgc.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form {
+            max-width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            color: white;
+        }
+
+        .formbutton {
+            background-color: #4437bd;
+            transition: 0.3s;
+            padding: 40px;
+            margin-bottom: 100px !important;
+        }
+
+        .formbutton:hover {
+            background-color: #dcc2ff !important;
+            color: rgb(0, 0, 0) !important;
+        }
+
+        .formbox {
+            transition: 0.3s;
+        }
+
+        .formbox:hover {
+            background-color: #c0c0c0 !important;
+        }
+
+        .section4 {
+            background-image: url("img/table_bgc.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .table_name {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            line-height: 150px;
+            font-size: 4vw;
+            text-align: center;
+            padding-top: 50px;
+            text-shadow: black 0px 0px 10px, black 0px 0px 10px, black 0px 0px 10px;
+        }
+
+        .rocket_table {
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+
+        td {
+            background-color: rgba(3, 83, 164, 1);
+            color: white;
+        }
+
+        .footerText {
+            text-align: center;
+            margin: 0;
+            padding: 10px;
+            color: white;
+        }
+
+        /* MEDIA */
+        @media screen and (max-width: 600px) {
+            .navbut {
+                display: none !important;
+            }
+
+            #dropdown {
+                float: left;
+            }
+
+            .max-width {
+                max-width: 100%;
+            }
+
+            .planetcard {
+                height: auto;
+            }
+        }
+
+
+        @media screen and (min-width: 601px) {
+            #dropdown {
+                display: none;
+            }
+
+        }
+
+
+        @media screen and (min-width: 1300px) {
+            .section2info {
+                column-count: 2;
+                column-gap: 50px;
+            }
+
+            .form {
+                width: 1000px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: lightgray">
+    <!-- NAVIGATION -->
+    <div class="w3-bar w3-top navigation" style="background-color: rgb(72, 17, 97);">
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile navbut"><i class="fa fa-home"></i>Home</a>
+        <a href="#rockets" class="w3-bar-item w3-button w3-mobile navbut"><i class="fa fa-rocket"></i>Rockets</a>
+        <a href="#rockets_table" class="w3-bar-item w3-button w3-mobile navbut"><i class="fa fa-rocket"></i>
+            Table</a>
+        <a href="#planets" class="w3-bar-item w3-button w3-mobile navbut"><i class="fa-solid fa-circle-nodes"></i>
+            Planets</a>
+        <a href="#about" class="w3-bar-item w3-button w3-mobile navbut"><i class="fa-solid fa-user"></i>About</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-mobile navbut"><i class="fa-solid fa-phone"></i>
+            Contact</a>
+
+        <div class="w3-dropdown-hover w3-mobile">
+            <button id="dropdown" class="w3-button w3-left-align"><i class="fa-solid fa-bars"></i></button>
+            <div class="w3-dropdown-content w3-bar-block" style="background-color: rgb(72, 17, 97)">
+                <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-left-align navbut2"><i
+                        class="fa fa-home"></i> Home</a>
+                <a href="#rockets" class="w3-bar-item w3-button w3-mobile w3-left-align navbut2"><i
+                        class="fa fa-rocket"></i> Rockets</a>
+                <a href="#rockets_table" class="w3-bar-item w3-button w3-mobile w3-left-align navbut2"><i
+                        class="fa fa-rocket"></i> Table</a>
+                <a href="#planets" class="w3-bar-item w3-button w3-mobile w3-left-align navbut2"><i
+                        class="fa-solid fa-circle-nodes"></i> Planets</a>
+                <a href="#about" class="w3-bar-item w3-button w3-mobile w3-left-align navbut2"><i
+                        class="fa-solid fa-user"></i> About</a>
+                <a href="#contact" class="w3-bar-item w3-button w3-mobile w3-left-align navbut2"><i
+                        class="fa-solid fa-phone"></i> Contact</a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- TOP -->
+
+
+    <!-- SEKCJA RAKIETY -->
+    <div class="section2" id="rockets">
+        <p class="section2info  w3-threequarter w3-mobile "><span class="section2topic">ROCKETS</span><br>
+            Whether flying a
+            small model rocket or launching a giant
+            cargo
+            rocket to Mars, the principles of how rockets work are exactly the same.
+            Understanding and applying these principles means
+            mission success.
+            In the early days of rocketry, the flight of a fire
+            arrow or other rocket device was largely a matter
+            of chance. It might fly; it might skitter about, shooting sparks and smoke; or it might explode. Through
+            centuries of trial and error, rockets became more
+            reliable. However, real advancements in rocketry
+            depended upon a scientific and mathematical
+            understanding of motion. That came in the seventeenth century with the works of scientists such as
+            Galileo and Isaac Newton.
+            Galileo conducted a wide range of experiments
+            involving motion. Through studies of inclined
+            planes, Galileo concluded that moving objects
+            did not need the continuous application of force
+            (in the absence of friction and drag) to keep moving. Galileo discovered the principle of inertia, that
+            all matter, because of its mass, resists changes in
+            motion. The more mass, the more resistance.
+            Isaac Newton, born the year Galileo died, advanced
+            Galileo’s discoveries and those of others by proposing three basic laws of motion. These laws are the
+            foundation of all rocket science. Understand the
+            laws and you know just about everything you need
+            to build successful rockets. Apply the laws and you
+            become a “rocket scientist. Naturally, launching rockets into space is more
+            complicated than Newton’s laws of motion imply.
+            Designing rockets that can actually lift off Earth and
+            reach orbital velocities or interplanetary space is an
+            extremely complicated process.
+            Newton’s laws are the beginning, but many other
+            things come into play. For example, air pressure
+            plays an important role while the rocket is still in
+            the atmosphere. The internal pressure produced
+            by burning rocket propellants inside the rocket
+            engine combustion chamber has to be greater than
+            the outside pressure to escape through the engine
+            nozzle. In a sense, the outside air is like a cork in
+            the engine. It takes some of the pressure generated
+            inside the engine just to exceed the ambient outside
+            pressure. Consequently, the velocity of combustion products passing through the opening or throat
+            of the nozzle is reduced. The good news is that as
+            the rocket climbs into space, the ambient pressure
+            becomes less and less as the atmosphere thins and
+            the engine thrust increases.
+            Another important factor is the changing mass
+            of the rocket. As the rocket is gaining thrust as
+            it accelerates upward due to outside pressure
+            changes, it is also getting a boost due to its changing mass. Every bit of rocket propellant burned has
+            mass. As the combustion products are ejected by
+            the engine, the total mass of the vehicle lessens. As
+            it does its inertia, or resistance to change in motion,
+            becomes less. As a result, upward acceleration of
+            the rocket increases.</p>
+    </div>
+
+    <!-- SEKCJA TABELA -->
+    <div class="w3-container section4" id="rockets_table" style="min-height: 100vh">
+        <p class="table_name"> TOP 10 powerful space rockets ever made</p>
+        <table class="w3-table-all w3-card-4 rocket_table">
+            <tr>
+                <td>Name</td>
+                <td>Payload</td>
+                <td>Nation</td>
+            </tr>
+            <tr>
+                <td>Space Shuttle</td>
+                <td>60,600 lbs</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Delta IV Heavy</td>
+                <td>63,000 lbs</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Falcon Heavy</td>
+                <td>141,000 lbs</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>N1</td>
+                <td>210,000 lbs</td>
+                <td>USSR</td>
+            </tr>
+            <tr>
+                <td>Energia</td>
+                <td>220,000 lbs</td>
+                <td>USSR</td>
+            </tr>
+            <tr>
+                <td>Yenisei</td>
+                <td>290,000 lbs</td>
+                <td>Russia</td>
+            </tr>
+            <tr>
+                <td>SLS</td>
+                <td>300,000 lbs</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Long March 9</td>
+                <td>310,000 lbs</td>
+                <td>China</td>
+            </tr>
+            <tr>
+                <td>Saturn V</td>
+                <td>310,000 lbs</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+
+                <td>Starship</td>
+                <td>330,000 lbs</td>
+                <td>USA</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- SEKCJA PLANETY -->
+    <section
+        style="background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,1) 18%, rgb(19, 21, 48) 50%, rgba(0,0,0,1) 100%);">
+        <h1 id="planets">PLANETS</h1>
+        <div class="cards">
+            <div class="w3-col s12 m6 l4 max-width w3-margin card">
+                <div class="w3-card-4">
+                    <header class="w3-container" style="background-color: white;">
+                        <h1 style="text-align: center;">MERCURY</h1>
+                    </header>
+
+                    <div class="w3-container planetcard">
+                        <img class="planetimg" src="img/mercury.png" alt="Mercury">
+                        <p>Mercury is the smallest planet in our solar system. It's a little bigger than Earth's Moon.
+                            It is the closest planet to the Sun, but it's actually not the hottest. Venus is hotter.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l4 max-width w3-margin card">
+                <div class="w3-card-4">
+                    <header class="w3-container" style="background-color: white;">
+                        <h1 style="text-align: center;">VENUS</h1>
+                    </header>
+
+                    <div class="w3-container planetcard">
+                        <img class="planetimg" src="img/venus.png" alt="Venus">
+                        <p>Venus is the second planet from the Sun and is Earth's closest planetary neighbor. It's one
+                            of the four inner, terrestrial (or rocky) planets, and it's often called Earth's twin
+                            because it's similar in size and density.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l4 max-width w3-margin card">
+                <div class="w3-card-4">
+                    <header class="w3-container" style="background-color: white;">
+                        <h1 style="text-align: center;">EARTH</h1>
+                    </header>
+
+                    <div class="w3-container planetcard">
+                        <img class="planetimg" src="img/earth.png" alt="Earth">
+                        <p>Earth is a rocky planet with a solid and dynamic surface of mountains, canyons, plains and
+                            more. Most of our planet is covered in water.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l4 max-width w3-margin card">
+                <div class="w3-card-4">
+                    <header class="w3-container" style="background-color: white;">
+                        <h1 style="text-align: center;">MARS</h1>
+                    </header>
+
+                    <div class="w3-container planetcard">
+                        <img class="planetimg" src="img/mars.png" alt="Earth">
+                        <p>Mars is the fourth planet from the Sun - a dusty, cold, desert world with a very thin
+                            atmosphere. Mars is also a dynamic planet with seasons, polar ice caps, canyons, extinct
+                            volcanoes, and evidence that it was even more active in the past.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l4 max-width w3-margin card">
+                <div class="w3-card-4">
+                    <header class="w3-container" style="background-color: white;">
+                        <h1 style="text-align: center;">JUPITER</h1>
+                    </header>
+
+                    <div class="w3-container planetcard">
+                        <img class="planetimg" src="img/Jupiter.png" alt="Earth">
+                        <p>Jupiter is the fifth planet from our Sun and is, by far, the largest planet in the solar
+                            system - more than twice as massive as all the other planets combined. Jupiter's stripes and
+                            swirls are actually cold, windy clouds of ammonia and water, floating in an atmosphere of
+                            hydrogen and helium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l4 max-width w3-margin card">
+                <div class="w3-card-4">
+                    <header class="w3-container" style="background-color: white;">
+                        <h1 style="text-align: center;">SATURN</h1>
+                    </header>
+
+                    <div class="w3-container planetcard">
+                        <img class="planetimg" src="img/Saturn.png" alt="Earth">
+                        <p>Saturn is the sixth planet from the Sun and the second-largest planet in our solar system.
+                            Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.
+                            Saturn is not the only planet to have rings, but none are as spectacular or as complex as
+                            Saturn's. Saturn also has dozens of moons.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l4 max-width w3-margin card">
+                <div class="w3-card-4">
+                    <header class="w3-container" style="background-color: white;">
+                        <h1 style="text-align: center;">URANUS</h1>
+                    </header>
+
+                    <div class="w3-container planetcard">
+                        <img class="planetimg" src="img/Uranus.png" alt="Earth">
+                        <p>Uranus is the seventh planet from the Sun, and has the third-largest diameter in our solar
+                            system. It was the first planet found with the aid of a telescope, Uranus was discovered in
+                            1781 by astronomer William Herschel, although he originally thought it was either a comet or
+                            a star.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l4 max-width w3-margin card">
+                <div class="w3-card-4">
+                    <header class="w3-container" style="background-color: white;">
+                        <h1 style="text-align: center;">NEPTUNE</h1>
+                    </header>
+
+                    <div class="w3-container planetcard">
+                        <img class="planetimg" src="img/naptune.png" alt="Earth">
+                        <p>Neptune is dark, cold, and very windy. It's the last of the planets in our solar system. It's
+                            more than 30 times as far from the Sun as Earth is. Neptune is very similar to Uranus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+
+    <!-- SEKCJA PIATA -->
+    <div class="w3-container section5" id="about" style="min-height: 100vh; background-image: url(img/avatar_bgc.jpg)">
+        <div class="w3-content w3-margin-top" style="max-width:1000px;">
+            <div class="w3-white w3-text-grey w3-card-4">
+                <div class="w3-display-container">
+                    <img src="img/avatar.png" style="width:100%;" alt="Avatar">
+                    <div class="w3-display-bottomleft w3-container w3-text-black">
+                        <h2 style="color: white">Tobiasz Kubiak</h2>
+                    </div>
+                </div>
+                <div class="w3-container">
+                    <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-purple"></i>Student</p>
+                    <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-purple"></i>Łódź, Poland</p>
+                    <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-purple"></i>Student123@gmail.com
+                    </p>
+                    <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-purple"></i>1224435534</p>
+                    <hr>
+
+                    <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-purple"></i>Skills</b>
+                    </p>
+                    <p>C++</p>
+                    <div class="w3-light-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-purple" style="width:90%">90%</div>
+                    </div>
+                    <p>C#</p>
+                    <div class="w3-light-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-purple" style="width:80%">
+                            <div class="w3-center w3-text-white">80%</div>
+                        </div>
+                    </div>
+                    <p>HTML</p>
+                    <div class="w3-light-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-purple" style="width:75%">75%</div>
+                    </div>
+                    <p>LINUX</p>
+                    <div class="w3-light-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-purple" style="width:50%">50%</div>
+                    </div>
+                    <br>
+
+                    <p class="w3-large w3-text-theme"><b><i
+                                class="fa fa-globe fa-fw w3-margin-right w3-text-purple"></i>Languages</b></p>
+                    <p>English</p>
+                    <div class="w3-light-grey w3-round-xlarge">
+                        <div class="w3-container w3-center w3-round-xlarge w3-purple" style="width:100%">100%</div>
+                    </div>
+                    <p>German</p>
+                    <div class="w3-light-grey w3-round-xlarge">
+                        <div class="w3-container w3-center w3-round-xlarge w3-purple" style="width:30%">30%</div>
+                    </div>
+                    <br>
+                </div>
+            </div><br>
+        </div>
+    </div>
+
+    <!-- SEKCJA KONTAKT -->
+    <div class="section3" id="contact">
+        <form class="form w3-container">
+            <h2 class="w3-center" style="margin-top: 100px">Contact Me</h2>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:40px"></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:40px"></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:40px"></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:40px"></div>
+                <div class="w3-rest">
+                    <textarea class="formbox" id="w3review" name="w3review" placeholder=" Text" rows="10" cols="200"
+                        style="resize: none;"></textarea>
+                </div>
+            </div>
+
+            <button class=" formbutton w3-button w3-block w3-section w3-ripple">Send</button>
+
+        </form>
+    </div>
+
+
+
+    <div class="footer" style="background-color: rgb(72, 17, 97);">
+        <p class="footerText">Copyright <i class="fa-regular fa-copyright"></i> 2023 Tobiasz Kubiak
+        </p>
+    </div>
+</body>
+
+</html>

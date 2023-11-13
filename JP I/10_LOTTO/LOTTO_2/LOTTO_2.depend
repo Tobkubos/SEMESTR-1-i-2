@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1668625902 source:c:\users\gregk\onedrive\pulpit\jezyki programowania\lotto_2\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1668625904 source:d:\jezyki_programowania_lepiej\10_lotto\lotto_2\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1668625904 source:c:\users\gregk\onedrive\pulpit\jezyki_programowania_lepiej\10_lotto\lotto_2\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

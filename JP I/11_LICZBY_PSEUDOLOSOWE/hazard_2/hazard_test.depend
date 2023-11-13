@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1668157279 source:c:\users\tobiasz\desktop\jezyki programowania\hazard_test\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1668157280 source:g:\jezyki programowania\hazard_2\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1668157280 source:c:\users\gregk\onedrive\pulpit\jezyki programowania\liczby_pseudolosowe\hazard_2\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1668605888 source:f:\jezyki_programowania_lepiej\liczby_pseudolosowe\hazard_2\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

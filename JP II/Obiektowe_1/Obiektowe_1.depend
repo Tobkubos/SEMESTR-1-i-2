@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1676984344 source:c:\users\gregk\onedrive\pulpit\obiektowe_1\main.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+

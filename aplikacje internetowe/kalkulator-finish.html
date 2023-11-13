@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            animation: widok 2s;
+            background-color: #012a4a;
+            overflow: hidden;
+        }
+
+        #tlo {
+            margin-left: calc(50% - 450px);
+            position: absolute;
+            width: 700px;
+            height: 100vh;
+            background-color: #012a4a;
+            border-left: 100px solid #ddd;
+            border-right: 100px solid #ddd;
+
+        }
+
+        #kalk {
+            background-color: #1e6091;
+            width: 500px;
+            height: 600px;
+            position: absolute;
+            margin-left: calc(50% - 250px);
+            border-top: 170px solid black;
+            border-bottom: 400px solid black;
+        }
+
+        h1 {
+            margin-top: 35px;
+            left: 60px;
+            text-transform: uppercase;
+            font-size: 33px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(223, 223, 223);
+            position: absolute;
+        }
+
+        #a1,
+        #b1 {
+            padding-left: 10px;
+            cursor: pointer;
+            border: 4px solid black;
+            box-sizing: border-box;
+            margin-left: calc(50% - 200px);
+            margin-bottom: 5px;
+            width: 400px;
+            height: 50px;
+            font-size: 40px;
+            background-color: beige;
+        }
+
+
+        #a1 {
+            margin-top: 120px;
+        }
+
+        #dzialanie {
+            margin-top: 25px;
+            margin-left: calc(50% - 200px);
+        }
+
+        .przycisk {
+            cursor: pointer;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            box-sizing: border-box;
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: #d9ed92;
+            border: 4px solid black;
+            transition: 0.2s;
+        }
+
+        .przycisk:hover {
+            background-color: #52b69a;
+        }
+
+        #wynik {
+            padding-left: 10px;
+            width: 400px;
+            height: 100px;
+            font-size: 60px;
+            background-color: #76c893;
+            color: white;
+            box-sizing: border-box;
+            border: 4px solid black;
+            margin-top: 20px;
+        }
+
+
+        @keyframes widok {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <script>
+        // function powitanie() {
+        //     let x = prompt("podaj imie", " ");
+        //     alert('witaj ' + x + ' na stronie! Milego korzystania z kalkulatora!')
+        //     console.log(x);
+        // }
+
+        function Dodaj() {
+            form1.w1.value = parseFloat(form1.a1.value) + parseFloat(form1.b1.value);
+        }
+
+        function Odejmij() {
+            form1.w1.value = parseFloat(form1.a1.value) - parseFloat(form1.b1.value);
+        }
+
+        function Pomnóż() {
+            form1.w1.value = parseFloat(form1.a1.value) * parseFloat(form1.b1.value);
+        }
+
+        function Podziel() {
+            form1.w1.value = parseFloat(form1.a1.value) / parseFloat(form1.b1.value);
+        }
+
+        function Potęga() {
+            form1.w1.value = Math.pow(form1.a1.value, form1.b1.value);
+        }
+
+        function Silnia() {
+            // let x = prompt("Wpisz liczbę", "");
+            // let y = 1;
+            // let z = x;
+
+            // for (z; z > 0; z--) {
+            //     y = y * z;
+            // }
+            // alert("To będzie " + y)
+
+            let x = form1.a1.value
+            let y = 1;
+            let z = x;
+
+            for (z; z > 0; z--) {
+                y = y * z;
+            }
+            form1.w1.value = y;
+
+
+        }
+
+        function Pierwiastek() {
+            let x = prompt("Podaj wartość", "");
+            alert("pierwiastek z " + x + " = " + Math.sqrt(x));
+        }
+
+        function Clear() {
+            form1.a1.value = null;
+            form1.b1.value = null;
+            form1.w1.value = null;
+        }
+    </script>
+</head>
+
+<body class=widok onload="powitanie()">
+    <div id="tlo">
+        <div id="kalk">
+            <h1>kalkulator v3000</h1>
+            <form name="form1">
+                <input id="a1" type="text" name="a1" size="5">
+                <input id="b1" type="text" name="b1" size="5">
+                <div id="dzialanie">
+                    <input id="plus" class="przycisk" type="button" value="+" onclick="Dodaj()">
+                    <input class="przycisk" type="button" value="-" onclick="Odejmij()">
+                    <input class="przycisk" type="button" value="x" onclick="Pomnóż()">
+                    <input class="przycisk" type="button" value="/" onclick="Podziel()">
+                    <input class="przycisk" type="button" value="!" onclick="Silnia()">
+                    <input class="przycisk" type="button" value="^" onclick="Potęga()">
+                    <input class="przycisk" type="button" value="pierw" onclick="Pierwiastek()">
+                    <input class="przycisk" type="button" value="C" onclick="Clear()">
+                    <!-- <br> <hr> -->
+                    <div>
+                        <input id="wynik" type="text" readonly name="w1">
+            </form>
+        </div>
+    </div>
+    <form name="fz"></form>
+</body>
+
+</html>

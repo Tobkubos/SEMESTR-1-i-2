@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1668072626 source:c:\users\gregk\onedrive\pulpit\jezyki programowania\8_tablice\tablice_2\main.cpp
+	<iostream>
+
+1668606926 source:f:\jezyki_programowania_lepiej\8_tablice\tablice_2\main.cpp
+	<iostream>
+	<stdlib.h>
+	<ctime>
+

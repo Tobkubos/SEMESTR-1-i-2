@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(255, 204, 108);
+    overflow: hidden;
+    animation: widok 2s;
+}
+
+@keyframes widok {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#szach {
+    position: absolute;
+    top: 97px;
+    left: 97px;
+    width: 801px;
+    height: 801px;
+    border: 3px solid rgb(99, 86, 86);
+    box-sizing: content-box;
+    background-color: rgb(255, 211, 177);
+}
+
+div.tlo_img {
+
+    margin: 45px 0px;
+    width: 1920px;
+    height: 850px;
+    background-color: orange;
+    border-top: 30px solid rgb(255, 191, 72);
+    border-bottom: 30px solid rgb(255, 191, 72);
+}
+
+div.tlo_menu {
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+    left: 950px;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(145, 77, 0);
+    border: black 5px solid;
+}
+
+#name {
+    z-index: 2;
+    text-shadow:
+        -5px 0 black,
+        0 5px black,
+        5px 0 black,
+        0 -5px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(223, 124, 32);
+    text-transform: uppercase;
+    position: absolute;
+    padding: 20px;
+
+}
+
+#name {
+    color: rgb(255, 230, 0);
+    padding: 20px;
+    font-size: 90px;
+    top: 150px;
+    left: 1000px;
+    padding: 23px;
+}
+
+.mini {
+    position: absolute;
+    height: 99px;
+    width: 99px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.mini img {
+    width: 99px;
+    height: 99px;
+}
+
+
+#losuj {
+    z-index: 2;
+    background-color: rgb(255, 98, 0);
+    text-shadow:
+        -3px 0 black,
+        0 3px black,
+        3px 0 black,
+        0 -3px black;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 50px;
+    width: 220px;
+    height: 100px;
+    position: absolute;
+    top: 350px;
+    left: 1125px;
+}
+
+
+
+audio {
+    top: 470px;
+    left: 1075px;
+    z-index: 2;
+    position: absolute;
+    border: black solid 3px;
+    border-radius: 55px;
+    background-color: orange;
+}
+
+
+/*------------ DYNIE-------------- */
+.dynia {
+    position: absolute;
+}
+
+#p1 {
+    width: 250px;
+    height: 250px;
+    rotate: 30deg;
+    left: 830px;
+    top: -10px;
+}
+
+#p2 {
+    width: 500px;
+    height: 500px;
+    rotate: -50deg;
+    left: 650px;
+    top: 500px;
+}
+
+#p3 {
+    width: 300px;
+    height: 300px;
+    rotate: 60deg;
+    left: 1650px;
+    top: -50px;
+}
+
+#p4 {
+    width: 150px;
+    height: 150px;
+    rotate: 160deg;
+    left: 0px;
+    top: 800px;
+}
+
+#p5 {
+    width: 150px;
+    height: 150px;
+    rotate: -20deg;
+}

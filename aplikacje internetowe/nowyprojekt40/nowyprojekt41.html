@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            animation: widok 2s;
+            background-color: #3E442B;
+        }
+
+        div {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            margin-left: calc(50% - 450px);
+            margin-top: 20px;
+        }
+
+        div img {
+            width: 150px;
+            height: 150px;
+        }
+
+        p {
+            font-size: 90px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            margin-left: calc(50% - 305px);
+            margin-top: 50px;
+            color: #D6EEFF;
+            background-color: #6A7062;
+            width: 600px;
+            text-align: center;
+            letter-spacing: 15px;
+        }
+
+        @keyframes widok {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #przycisk {
+            width: 600px;
+            margin-left: calc(50% - 305px);
+            margin-top: 780px;
+            font-size: 90px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            color: #D6EEFF;
+            background-color: #6A7062;
+            padding-bottom: 10px;
+            letter-spacing: 15px;
+            text-transform: uppercase;
+            border: none;
+            animation: colorRotate 3s linear 0s infinite;
+        }
+
+        #a33 {
+            background-color: white;
+        }
+
+        @keyframes colorRotate {
+            from {
+                color: #6666ff;
+            }
+
+            10% {
+                color: #0099ff;
+            }
+
+            50% {
+                color: #00ff00;
+            }
+
+            75% {
+                color: #ff3399;
+            }
+
+            100% {
+                color: #6666ff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+
+        let num = 4, newDiv, divIdName;
+        for (let i = 0; i < num; i++) {
+            for (let j = 0; j < num; j++) {
+                newDiv = document.createElement('div');
+                divIdName = 'a' + i + j;
+                newDiv.setAttribute('id', divIdName);
+                newDiv.style.top = 150 + 150 * i + 'px';
+                newDiv.style.left = 150 + 150 * j + 'px';
+                if (i + j != 6)
+                    newDiv.innerHTML = "<img src='kawalek_" + i + "_" + j + ".png'>";
+                newDiv.addEventListener('click', function () { Graj(this); });
+                document.body.appendChild(newDiv);
+            }
+        }
+
+        let tabDiv = document.querySelectorAll('div');
+        let TabPos = [];
+        let elem;
+
+
+        for (let i = 0; i < 16; i++) {
+            TabPos[i] = [];
+        }
+
+        for (let i = 0; i < 16; i++) {
+            elem = tabDiv[i];
+            console.log(elem);
+            TabPos[i][0] = elem.style.left;
+            TabPos[i][1] = elem.style.top;
+            TabPos[i][2] = 0;
+        }
+
+        // function Graj(x) {
+        //     let bufor;
+        //     if (x.style.left == a33.style.top) {
+        //         bufor = x.style.left;
+        //         x.style.left = a33.style.left;
+        //         a33.style.left = bufor;
+
+        //     }
+        // }
+
+
+        function Graj(x) {
+            let bufor;
+            if (x.style.top == a33.style.top) {
+                if ((x.style.left.slice(0, 3) - a33.style.left.slice(0, 3) == 150) || (x.style.left.slice(0, 3) - a33.style.left.slice(0, 3) == -150)) {
+                    bufor = x.style.left;
+                    x.style.left = a33.style.left;
+                    a33.style.left = bufor;
+                }
+            }
+            if (x.style.left == a33.style.left) {
+                if ((x.style.top.slice(0, 3) - a33.style.top.slice(0, 3) == 150) || (x.style.top.slice(0, 3) - a33.style.top.slice(0, 3) == -150)) {
+                    bufor = x.style.top;
+                    x.style.top = a33.style.top;
+                    a33.style.top = bufor;
+                }
+            }
+        }
+
+
+        function Mieszaj() {
+            for (let i = 0; i < 16; i++) TabPos[i][2] = 0; {
+                let x, i = 0;
+                while (i < 16) {
+                    x = Math.floor(Math.random() * 16);
+                    if (TabPos[x][2] == 0) {
+                        tabDiv[i].style.left = TabPos[x][0];
+                        tabDiv[i].style.top = TabPos[x][1];
+                        i++;
+                        TabPos[x][2] = 1;
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+<p>PUZZLE</p>
+<input type="button" value="mieszaj" id="przycisk" onclick="Mieszaj()">
+
+</html>

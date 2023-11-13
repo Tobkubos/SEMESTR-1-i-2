@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1667577808 source:c:\users\tobiasz\desktop\jezyki programowania\zgadnj_liczbe_2_graczy\main.cpp
+	<iostream>
+	<stdlib.h>
+
+1667577810 source:g:\jezyki programowania\zgadnj_liczbe_2_graczy\main.cpp
+	<iostream>
+	<stdlib.h>
+

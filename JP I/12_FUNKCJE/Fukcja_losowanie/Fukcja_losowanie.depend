@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1669278357 source:d:\users\ul0277200\desktop\fukcja_losowanie\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

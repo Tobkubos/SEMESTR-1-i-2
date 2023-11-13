@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        animation: widok 2s;
+        background-color: #272640;
+        overflow: hidden;
+    }
+
+    #menu {
+        box-sizing: border-box;
+        width: 500px;
+        position: absolute;
+        background-color: #312244;
+        margin-left: calc(50% - 250px);
+        margin-top: 50px;
+        border-left: white solid 15px;
+        border-right: white solid 15px;
+    }
+
+    h1 {
+        font-size: 60px;
+        color: white;
+        margin-top: 40px;
+    }
+
+    h2 {
+        animation: colorRotate 3s linear 0s infinite;
+    }
+
+    @keyframes colorRotate {
+        from {
+            color: #6666ff;
+        }
+
+        10% {
+            color: #0099ff;
+        }
+
+        50% {
+            color: #00ff00;
+        }
+
+        75% {
+            color: #ff3399;
+        }
+
+        100% {
+            color: #6666ff;
+        }
+    }
+
+    @keyframes widok {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    p,
+    h1,
+    h2 {
+        position: relative;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+
+
+    a:link,
+    a:visited {
+        background-color: #3e1f47;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        width: 200px;
+        height: 65px;
+        padding-top: 40px;
+        border-left: 3px solid #3e1f47;
+        border-right: 3px solid #3e1f47;
+    }
+
+    a:hover,
+    a:active {
+        background-color: #4d194d;
+        transition: 0.4s;
+        font-size: 20px;
+        border-left: 3px solid white;
+        border-right: 3px solid white;
+    }
+</style>
+
+<body>
+    <h1>centrum projektów</h1>
+    <h2>działa jak należy!</h2>
+
+    <div id="menu">
+        <p><a href="kalkulator-finish.html">Liczydło</a></p>
+        <p><a href="zmianaObrazkow/zmianaObrazkow.html">Album</a></p>
+        <p><a href="memory_gra/div.html">Memory</a></p>
+        <p><a href="kolkoKrzyzyk/three.html">Tic Tac Toe</a></p>
+        <p><a href="nowyprojekt40/nowyprojekt41.html">Puzzle</a></p>
+
+
+    </div>
+
+</body>
+
+</html>

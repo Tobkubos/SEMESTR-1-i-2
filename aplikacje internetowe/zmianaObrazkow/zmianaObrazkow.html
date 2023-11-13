@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+            background-color: #001523;
+            animation: widok 2s;
+        }
+
+        @keyframes widok {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #menu {
+            width: 800px;
+            height: 1000px;
+            background-color: #002945;
+            position: absolute;
+            margin-left: calc(50% - 400px);
+            border-left: 15px solid #ffffff;
+            border-right: 15px solid #ffffff;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: white;
+            margin-top: 80px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 5px;
+            background-color: #3fc1c0;
+            line-height: 2;
+            border-top: 5px solid white;
+            border-bottom: 5px solid white;
+        }
+
+        .mini {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            border: 2px solid white;
+            top: 50px;
+        }
+
+        .mini img {
+            width: 100px;
+            height: 100px;
+            filter: grayscale(100%);
+            transition: 0.4s;
+        }
+
+        .mini img:hover {
+            width: 150px;
+            height: 150px;
+            margin-left: -25px;
+            margin-top: -25px;
+            border: 4px solid #00406c;
+            filter: grayscale(0%);
+        }
+
+        #ekran {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            top: 300px;
+            left: 200px;
+            border: 15px solid #00111c;
+            background-color: #00406c;
+        }
+
+        #ekran img {
+            width: 400px;
+            height: 400px;
+            animation: widok 0.5s;
+        }
+    </style>
+
+    <script>
+        function Wyswietl(zm1) {
+            ekran.innerHTML = zm1.innerHTML;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div id="menu">
+        <h1>album emoji</h1>
+        <div class="mini" id="a1" style="top:150px; left:-150px" onclick="Wyswietl(this)">
+            <img src="bell_1f514.png" alt="">
+        </div>
+        <div class="mini" id="a2" style="top:300px; left:-150px" onclick="Wyswietl(this)"> <img
+                src="christmas-tree_1f384.png" alt=""></div>
+        <div class="mini" id="a3" style="top:450px; left:-150px" onclick="Wyswietl(this)"> <img src="cookie_1f36a.png"
+                alt=""></div>
+        <div class="mini" id="a4" style="top:600px; left:-150px" onclick="Wyswietl(this)"> <img src="deer_1f98c.png"
+                alt=""></div>
+        <div class="mini" id="a5" style="top:750px; left:-150px" onclick="Wyswietl(this)"> <img src="elf_1f9dd.png"
+                alt=""></div>
+
+        <div class="mini" id="a1" style="top:150px; left:838px" onclick="Wyswietl(this)"> <img src="fire_1f525.png"
+                alt=""></div>
+        <div class="mini" id="a2" style="top:300px; left:838px" onclick="Wyswietl(this)"> <img
+                src="santa-claus_1f385.png" alt=""></div>
+        <div class="mini" id="a3" style="top:450px; left:838px" onclick="Wyswietl(this)"> <img
+                src="snowflake_2744-fe0f.png" alt=""></div>
+        <div class="mini" id="a4" style="top:600px; left:838px" onclick="Wyswietl(this)"> <img src="socks_1f9e6.png"
+                alt=""></div>
+        <div class="mini" id="a5" style="top:750px; left:838px" onclick="Wyswietl(this)"> <img
+                src="wrapped-gift_1f381.png" alt=""></div>
+        <div id="nazwa"></div>
+
+        <div id="ekran"></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1677589503 source:c:\users\gregk\onedrive\pulpit\obiektowe_1\main.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+
+1677589503 source:c:\users\gregk\onedrive\pulpit\obiektowe_wektory\main.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+

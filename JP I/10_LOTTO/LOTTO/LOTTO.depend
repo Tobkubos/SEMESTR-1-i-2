@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1668610572 source:d:\users\ul0277200\desktop\lotto\main.cpp
+	<iostream>
+	<stdlib.h>
+	<ctime>
+
+1668616788 source:d:\jezyki_programowania_lepiej\lotto\main.cpp
+	<iostream>
+	<stdlib.h>
+	<ctime>
+

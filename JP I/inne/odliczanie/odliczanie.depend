@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1666810922 source:c:\users\gregk\onedrive\pulpit\jezyki programowania\odliczanie\main.cpp
+	<iostream>
+	<windows.h>
+	<conio.h>
+
